@@ -1,6 +1,6 @@
 workspace:
   base: /back
-  path: src/github.com/CJTSAJ/drone-backend
+  path: src/github.com/Howard21432134/backend
 pipeline:
   build:
     image: maven:3.6.0-jdk-8-alpine
@@ -9,7 +9,7 @@ pipeline:
       - mvn clean package
   publish:
     image: plugins/docker
-    repo: cjtsaj/drone-backend
+    repo: 978118325/backend
     tags: ["latest", "v2"]
     secrets: [ docker_username, docker_password ]
     dockerfile: Dockerfile
